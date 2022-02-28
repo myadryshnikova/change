@@ -9,8 +9,9 @@ def subtraction_from_change(change, coins_dict, coin_nominal):
 
 
 def remove_coin_nominal(sorted_coins, coin_nominal):
-    while (coin_nominal in sorted_coins):
+    while coin_nominal in sorted_coins:
         sorted_coins.remove(coin_nominal)
+    return sorted_coins
 
 
 def give_change(coins=[], change=0):
@@ -47,10 +48,11 @@ def give_change(coins=[], change=0):
             give_change(sorted_coins, new_change)
 
 
-def set_parameters():
+def main():
     coins = [5, 10, 5, 50, 10, 20, 100, 200, 200, 5, 3]
-    print(give_change(coins, 25))
+    change = 5
+    print(give_change(coins, change))
 
 
 if __name__ == '__main__':
-    set_parameters()
+    main()
