@@ -9,3 +9,7 @@ Change is a python project to see if it's possible to give change with the coins
 
 You can clone this repository from Github to PyCharm. For this:
 VSC > Check Out from Version Controle > use URL of this project
+
+## Run test
+
+In order to run unit tests for this project, you need to run test_main.py in this project.
