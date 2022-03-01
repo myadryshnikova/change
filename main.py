@@ -31,7 +31,6 @@ def give_change(coins=[], change=0):
             remove_coin_nominal(sorted_coins, coin_nominal)
 
             if len(sorted_coins) == 0:
-                #print("False")
                 return False
 
             give_change(sorted_coins, new_change)
@@ -42,15 +41,14 @@ def give_change(coins=[], change=0):
             remove_coin_nominal(sorted_coins, coin_nominal)
 
             if len(sorted_coins) == 0:
-                #print("False")
                 return False
 
             give_change(sorted_coins, new_change)
 
 
 def main():
-    coins = [5, 10, 5, 50, 10, 20, 100, 200, 200, 5, 3]
-    change = 5
+    coins = [300, 200, 200]
+    change = 400
     print(give_change(coins, change))
 
 
