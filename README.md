@@ -13,3 +13,7 @@ VSC > Check Out from Version Controle > use URL of this project
 ## Run test
 
 In order to run unit tests for this project, you need to run test_main.py in this project.
+
+```bash
+python -m unittest -v test_main
+```
