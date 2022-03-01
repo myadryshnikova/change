@@ -14,4 +14,4 @@ jobs:
         with:
           python-version: '3.7'
       - name: Run tests
-        run: coverage run test_main.py
+        run: test_main.py
