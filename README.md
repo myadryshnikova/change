@@ -1,5 +1,7 @@
 # Сhange
 
+![Test Status](https://github.com/mycrln/change/actions/workflows/main.yml/badge.svg?branch=main)
+
 Change is a python project to see if it's possible to give change with the coins you have.
 
 ## Installation
