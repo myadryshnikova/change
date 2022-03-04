@@ -23,7 +23,6 @@ def give_change(coins=[], change=0):
     for coin_nominal in coins_dict.keys():
         if change % coin_nominal == 0:
             if change // coin_nominal <= coins_dict.get(coin_nominal):
-                #print("True")
                 return True
             else:
                 new_change = subtraction_from_change(change, coins_dict, coin_nominal)
@@ -47,9 +46,19 @@ def give_change(coins=[], change=0):
 
 
 def main():
-    coins = [300, 200, 200]
-    change = 400
-    print(give_change(coins, change))
+    try:
+        coins = [int(coin) for coin in input("Enter the coins you have: ").split()]
+        change = int(input("Enter the change to be returned: "))
+    except ValueError:
+        print("\nYou must enter integer numbers.")
+
+    try:
+        if give_change(coins, change):
+            print("\nYou CAN give the change.")
+        else:
+            print("\nYou CAN'T give the change.")
+    except NameError:
+        print("Try again.")
 
 
 if __name__ == '__main__':
